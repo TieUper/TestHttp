@@ -1,11 +1,10 @@
-package com.application.testhttp
+package com.application.testhttp.view
 
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.View
-import android.widget.TextView
 import androidx.appcompat.widget.AppCompatTextView
 
 

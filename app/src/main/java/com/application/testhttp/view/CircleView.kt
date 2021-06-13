@@ -1,4 +1,4 @@
-package com.application.testhttp
+package com.application.testhttp.view
 
 import android.content.Context
 import android.graphics.*

@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
-    <com.application.testhttp.SportView
+    <com.application.testhttp.view.PointFView
+        android:id="@+id/view_point"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

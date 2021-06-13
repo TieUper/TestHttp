@@ -1,11 +1,16 @@
 
 package com.application.testhttp
 
+import android.animation.ObjectAnimator
+import android.graphics.PointF
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.View
+import com.application.testhttp.view.TranslateView
 import com.google.gson.Gson
 import com.google.gson.JsonElement
+import com.hencoder.text.dp
 import retrofit2.Retrofit
 
 class MainActivity : AppCompatActivity() {
@@ -87,6 +92,12 @@ class MainActivity : AppCompatActivity() {
 
         var entity = Gson().fromJson<TestEntity>(content)
         println(entity.name?: "aaa")
+
+        val pointView = findViewById<View>(R.id.view_point)
+        val animator = ObjectAnimator.ofObject(pointView, "point", TranslateView.PointFEvaluator(), PointF(100.dp, 200.dp))
+        animator.startDelay = 1000
+        animator.duration = 2000
+        animator.start()
     }
 
     inline fun <reified T : Any> Gson.fromJson(json: String) : T = this.fromJson(json, T::class.java)
